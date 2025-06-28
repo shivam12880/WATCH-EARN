@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Watch & Earn Money</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Welcome | Watch & Earn</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #4facfe, #00f2fe);
-      color: #fff;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #00b09b, #96c93d);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
       text-align: center;
-      animation: fadeIn 1s ease;
-    }
-    header img {
-      width: 80px;
-      margin-bottom: 20px;
-      animation: slideDown 1s ease;
     }
     h1 {
-      font-size: 2.8rem;
-      margin: 10px 0;
-      font-weight: 600;
-      animation: popUp 1s ease;
+      font-size: 2.5em;
     }
     p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      animation: fadeIn 1.5s ease;
-    }
-    .btn {
-      margin-top: 30px;
-      padding: 15px 30px;
+      margin-top: 10px;
       font-size: 18px;
-      background-color: #ff416c;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 30px;
+      font-size: 16px;
+      background: #ff4b2b;
       border: none;
-      border-radius: 8px;
-      color: #fff;
+      color: white;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.3s ease;
-      animation: fadeIn 2s ease;
     }
-    .btn:hover {
-      background-color: #ff1e56;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.7);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes popUp {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    button:hover {
+      background: #e43a1b;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="Watch & Earn Logo">
-  </header>
+  <h1>Welcome to Watch & Earn!</h1>
+  <p>You are now logged in. Start earning by watching ads.</p>
+  <button onclick="logout()">Logout</button>
 
-  <h1>Watch & Earn Money</h1>
-  <p>Earn rewards by watching s
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBZdh33mmOKoGDLqx6gE_YBBGs6u3gLIvg",
+      authDomain: "watch-earn-90c62.firebaseapp.com",
+      projectId: "watch-earn-90c62",
+      storageBucket: "watch-earn-90c62.appspot.com",
+      messagingSenderId: "109118833582",
+      appId: "1:109118833582:web:918c34b5aa5354f587fe3f",
+      measurementId: "G-TVXG3FT2J8"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function logout() {
+      auth.signOut().then(() => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
+
+</body>
+</html>
