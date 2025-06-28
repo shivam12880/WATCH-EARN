@@ -2,42 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Watch & Earn</title>
+  <title>Watch & Earn Money</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+      color: #fff;
       text-align: center;
-      padding: 50px;
-      background: #f9f9f9;
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in;
     }
     header img {
-      height: 60px;
+      height: 70px;
+      animation: popUp 1s ease-out;
     }
-    main {
+    h1 {
+      font-size: 2.5em;
       margin-top: 30px;
+      animation: slideDown 1s ease-in-out;
+    }
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 18px;
+      animation: fadeIn 1.5s ease;
     }
     .btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      background-color: #28a745;
+      padding: 14px 28px;
+      font-size: 18px;
       color: white;
+      background-color: #ff6f61;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      margin-top: 25px;
+      animation: fadeIn 2s ease-in-out;
+      transition: background 0.3s;
     }
     .btn:hover {
-      background-color: #218838;
+      background-color: #ff3b2e;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Watch & Earn Logo">
+    <img src="logo.png" alt="Watch & Earn">
   </header>
-  <main>
-    <h1>Watch & Earn Money</h1>
-    <p>Earn money by watching videos and completing simple tasks.</p>
-    <button class="btn" onclick="window.location.href='https://forms.gle/YOUR-GOOGLE-FORM-LINK'">Submit Proof</button>
-  </main>
+
+  <h1>Welcome to Watch & Earn</h1>
+  <p>Earn real rewards by watching short videos, completing tasks, and submitting proof.</p>
+
+  <button class="btn" onclick="window.location.href='https://forms.gle/YOUR_GOOGLE_FORM_LINK'">Submit Proof</button>
+
 </body>
 </html>
