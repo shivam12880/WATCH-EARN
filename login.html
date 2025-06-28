@@ -66,12 +66,12 @@
     <div class="error" id="error"></div>
   </div>
 
-  <!--  Firebase JS Scripts -->
+  <!-- ✅ Firebase JS Scripts -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
 
   <script>
-    //  Firebase Configuration (your real keys)
+    // ✅ Firebase Configuration (your real keys)
     const firebaseConfig = {
       apiKey: "AIzaSyBZdh33mmOKoGDLqx6gE_YBBGs6u3gLIvg",
       authDomain: "watch-earn-90c62.firebaseapp.com",
@@ -82,11 +82,11 @@
       measurementId: "G-TVXG3FT2J8"
     };
 
-    // Initialize Firebase + Auth
+    // ✅ Initialize Firebase + Auth
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    //  Login Function
+    // ✅ Login Function
     function login() {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
@@ -100,7 +100,7 @@
         });
     }
 
-    //  Signup Function
+    // ✅ Signup Function
     function signup() {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
