@@ -3,53 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Watch & Earn Money</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #00b09b, #96c93d);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 60px 20px;
-      animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease;
     }
     header img {
-      height: 70px;
-      animation: popUp 1s ease-out;
+      width: 80px;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease;
     }
     h1 {
-      font-size: 2.5em;
-      margin-top: 30px;
-      animation: slideDown 1s ease-in-out;
+      font-size: 2.8rem;
+      margin: 10px 0;
+      font-weight: 600;
+      animation: popUp 1s ease;
     }
     p {
-      margin: 20px auto;
+      font-size: 1.2rem;
       max-width: 600px;
-      font-size: 18px;
       animation: fadeIn 1.5s ease;
     }
     .btn {
-      padding: 14px 28px;
+      margin-top: 30px;
+      padding: 15px 30px;
       font-size: 18px;
-      color: white;
-      background-color: #ff6f61;
+      background-color: #ff416c;
       border: none;
       border-radius: 8px;
+      color: #fff;
       cursor: pointer;
-      margin-top: 25px;
-      animation: fadeIn 2s ease-in-out;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
+      animation: fadeIn 2s ease;
     }
     .btn:hover {
-      background-color: #ff3b2e;
+      background-color: #ff1e56;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes slideDown {
@@ -58,7 +68,7 @@
     }
 
     @keyframes popUp {
-      from { transform: scale(0.5); opacity: 0; }
+      from { transform: scale(0.8); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
   </style>
@@ -66,13 +76,8 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Watch & Earn">
+    <img src="logo.png" alt="Watch & Earn Logo">
   </header>
 
-  <h1>Welcome to Watch & Earn</h1>
-  <p>Earn real rewards by watching short videos, completing tasks, and submitting proof.</p>
-
-  <button class="btn" onclick="window.location.href='https://forms.gle/YOUR_GOOGLE_FORM_LINK'">Submit Proof</button>
-
-</body>
-</html>
+  <h1>Watch & Earn Money</h1>
+  <p>Earn rewards by watching s
