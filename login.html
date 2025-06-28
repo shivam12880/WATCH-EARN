@@ -1,67 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login | Watch & Earn</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 60px;
-    }
-    h1 {
-      color: #222;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      max-width: 350px;
-      width: 90%;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 12px;
-      background: #28a745;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .error {
-      color: red;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
+  <h2>Login to Watch & Earn</h2>
+  <input type="email" id="email" placeholder="Email" />
+  <input type="password" id="password" placeholder="Password" />
+  <p id="error" style="color: red;"></p>
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
 
-  <h1>Watch & Earn - Login</h1>
-  <div class="container">
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Sign Up</button>
-    <div class="error" id="error"></div>
-  </div>
-
-  <!-- Firebase SDKs -->
+  <!-- 👇 Paste This Script At The End Just Before </body> -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
-
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBZdh33mmOKoGDLqx6gE_YBBGs6u3gLIvg",
@@ -73,7 +25,6 @@
       measurementId: "G-TVXG3FT2J8"
     };
 
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
@@ -83,7 +34,7 @@
 
       auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-          window.location.href = "index.html"; // Redirect to homepage
+          window.location.href = "index.html";
         })
         .catch((error) => {
           document.getElementById("error").innerText = error.message;
@@ -103,6 +54,5 @@
         });
     }
   </script>
-
 </body>
 </html>
